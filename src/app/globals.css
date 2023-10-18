@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-img {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 52%), rgb(93 68 254 / 21%)), url(/_next/static/media/space-bg.b789fd66.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 18px;
+}
+
+.spinner-border {
+  color: #fff;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button.btn.btn-danger {
+  background-color: #dc3545 !important;
+}
+
+button.btn.btn-dark {
+  background-color: #212529 !important;
+}
