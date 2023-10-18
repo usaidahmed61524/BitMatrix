@@ -4,7 +4,8 @@
 
 .bg-img {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(0 0 0 / 52%), rgb(93 68 254 / 21%)), url(/_next/static/media/space-bg.b789fd66.jpg);
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 52%), 
+  rgb(93 68 254 / 21%)), url(../app/images/space-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
