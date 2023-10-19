@@ -4,8 +4,8 @@
 
 .bg-img {
   height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(0 0 0 / 52%), 
-  rgb(93 68 254 / 21%)), url(../app/images/space-bg.jpg);
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 52%),
+      rgb(93 68 254 / 21%)), url(../app/images/space-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -15,7 +15,13 @@
 .spinner-border {
   color: #fff;
 }
+.modal-content {
+  background: linear-gradient(45deg, #2e217f4a, #2e227f5e) !important;
+}
 
+button.btn-close {
+  display: none;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -26,5 +32,21 @@ button.btn.btn-danger {
 }
 
 button.btn.btn-dark {
-  background-color: #212529 !important;
+  background-color: #000000 !important;
+}
+
+
+.spinner-border {
+  display: inline-block !important;
+  width: 50px !important;
+  color: #121c2e !important;
+  position: fixed !important;
+  top: 50% !important;
+  height: 50px !important;
+  left: 50% !important;
+  vertical-align: -0.125em !important;
+  background-color: currentColor !important;
+  border-radius: 50% !important;
+  -webkit-animation: .75s linear infinite spinner-grow !important;
+  animation: .75s linear infinite spinner-grow !important;
 }

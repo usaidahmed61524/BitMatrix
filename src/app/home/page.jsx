@@ -16,6 +16,7 @@ const Page = () => {
   const [inputError, setInputError] = useState("");
   const [loading, setLoading] = useState(false);
   const [loginBtnVisible, setLoginBtnVisible] = useState(true);
+  const [userName, setUserName] = useState("");
 
 
   const auth = useAuth();
@@ -41,6 +42,8 @@ const Page = () => {
     const uservalidator = response?.data?.data
     if (uservalidator.success == true) {
       setLoginBtnVisible(false);
+      const user = domain.slice(0, -5);
+      setUserName("welcome " + user)
       handleClose()
       setLoading(false);
     }
@@ -71,17 +74,15 @@ const Page = () => {
   return (
     <div className="bg-img">
       <div className="flex flex-col md:flex-row items-center justify-between nav-bg w-full p-4 md:p-0">
-        <div className="flex items-center mb-4 md:mb-0">
+        <div className="flex flex-wrap justify-between items-center mb-4 md:mb-0">
           <div className="mx-auto sm:mx-0 w-[150px] sm:w-[200px]">
             <Image src={logo} />
           </div>
+
         </div>
+        <h2 className="text-center text-2xl text-white">{userName}</h2>
 
         <div className="flex flex-col md:flex-row items-center">
-          <div className="inline-flex text-white py-1 px-4 border mr-4 hover:opacity-[0.80] mb-2 md:mb-0">
-            Wallet Connect
-          </div>
-
           {loginBtnVisible ? (
             <button
               className="inline-flex text-white py-1 px-4 border mr-4 hover:opacity-[0.80] mb-2 md:mb-0"
@@ -107,7 +108,7 @@ const Page = () => {
           ) : (
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Insert Your MMIT Domain</Modal.Title>
+                <Modal.Title className="text-white">Insert Your MMIT Domain</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form>
@@ -150,7 +151,7 @@ const Page = () => {
       </div>
       <div className="flex items-center justify-center">
         <h1 className="text-white text-2xl md:text-5xl mt-10 md:mt-80 px-4 md:px-32 text-center font-thin leading-[1.50]">
-        Skyline Web represents a captivating, story-led, Web3 journey.
+          Skyline Web represents a captivating, story-led, Web3 journey.
         </h1>
       </div>
     </div>
