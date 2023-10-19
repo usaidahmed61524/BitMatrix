@@ -60,6 +60,7 @@ const Page = () => {
 
 
   const logOutUser = () => {
+    setUserName("")
     setLoginBtnVisible(true);
   };
 
