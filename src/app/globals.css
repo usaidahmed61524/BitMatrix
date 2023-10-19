@@ -31,10 +31,6 @@ button.btn.btn-danger {
   background-color: #dc3545 !important;
 }
 
-button.btn.btn-dark {
-  background-color: #000000 !important;
-}
-
 
 .spinner-border {
   display: inline-block !important;
@@ -49,4 +45,14 @@ button.btn.btn-dark {
   border-radius: 50% !important;
   -webkit-animation: .75s linear infinite spinner-grow !important;
   animation: .75s linear infinite spinner-grow !important;
+}
+
+button.btn.btn-danger {
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+}
+
+button.btn.btn-dark {
+  background-color: #2e227f !important;
 }

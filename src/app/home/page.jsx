@@ -109,7 +109,7 @@ const Page = () => {
           ) : (
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title className="text-white">Insert Your MMIT Domain</Modal.Title>
+                <Modal.Title className="text-light">Insert Your MMIT Domain</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form>
